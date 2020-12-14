@@ -6,12 +6,17 @@ body {
     font-family: sans-serif;
     height: 100vh;
     background-attachment: fixed;
+
+}
+
+h1,h2,h3,h4,h5{
+    color: rgba(255, 255, 255, 0.884);
 }
 
 .login-box {
 width: 320px;
-height: 420px;
-background: #000;
+height: 390px;
+background: rgba(0, 0, 0, .5);
 color: #fff;
 top: 50%;
 left: 50%;
@@ -26,6 +31,157 @@ padding: 70px 30px;
     height: 100px;
     border-radius: 50%;
     position: absolute;
-    top: -50px;
+    top: -34px;
     left: calc(50% - 50px);
   }
+
+  .login-box h2 {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+  }
+  
+  .login-box label {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+  }
+  
+  .login-box input {
+    width: 100%;
+    margin-bottom: 20px;
+
+  }
+
+  .login-box input::placeholder {
+    color:  rgba(255, 255, 255, 0.884);
+  }
+  
+
+
+  .login-box input[type="email"], .login-box input[type="password"] {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+  }
+  
+  .login-box input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #b80f22;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+    margin: 0%;
+  }
+  
+  .login-box input[type="submit"]:hover {
+    cursor: pointer;
+    background: #ffc107;
+    color: #000;
+  }
+  
+  .login-box a {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgrey;
+  }
+  
+  .login-box a:hover {
+    color: #fff;
+  }
+
+  .mensaje-flash{
+    background-color: rgba(255, 0, 0, 0.747);
+    width: 25%;
+    margin: 0 auto;
+    border-radius: 5px;
+  }
+  .close{
+      background: rgba(255, 0, 0, 0.397);
+      border: none;
+      font-size: 17px;
+
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+    border-right:1px solid #bbb;
+  }
+  
+  li:last-child {
+    border-right: none;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color: #4CAF50;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+    background-color: #f2f2f2f1
+  }
+  
+ 
+  
+  th {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  .boton{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #b80f22;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+    margin: 0%;
+    padding: 10px;
+  }
+  
+  .boton:hover {
+    cursor: pointer;
+    background: #ffc107;
+    color: #000;
+  }
+
+

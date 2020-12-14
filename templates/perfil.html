@@ -7,25 +7,19 @@
 {% block content %}
 
 <table class="table">
-  
-    <thead>
+
       <center><h3>***Mi Perfil***</h3></center>
-      <tr>
-        <th>Nombre</th>
-        <th>Correo</th>
-      </tr>
-    </thead>
-  
-    <tbody>
-      <tr>
-        
-        <td>
+    <tr>
+      <th>Nombre</th>
+      <th>Correo</th>
+    </tr>
+    <tr>
+      <td>{{ session['usuario'][1] }}</td>
+      <td>{{ session['usuario'][3] }}</td>
+    </tr>
 
-            <a class="btn btn-outline-danger" href="{{ url_for('editar_perfil')}}">Editar</a>
-
-        </td>
-      </tr>
-    </tbody>
   </table>
-
+  <center>
+  <a class="boton" href="{{ url_for('editar_perfil')}}">Editar</a>
+</center>
 {% endblock %}
