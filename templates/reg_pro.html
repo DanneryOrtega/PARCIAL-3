@@ -1,0 +1,47 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}
+    Regist
+{% endblock %}
+
+{% block content %}
+
+<center>
+<form action="{{ url_for('guardar_pro') }}" method="POST">
+
+    <div class="bg-info text-white">
+        <h6>*********************************</h6>
+        <h2>REGISTRAR PRODUCTOS</h2>
+        <h6>*********************************</h6>
+    </div>
+    <h4 class="text-white">Hola</h4>
+
+    <div class="form-group col-md-6">
+        <label for="nombre" class="h4">Nombre</label>
+        <input type="text" id="nombre" name="nombre" class="form-control" />
+    </div>
+
+    <div class="form-group col-md-6">
+        <label for="categoria">Categoria </label>
+        <select name="categoria">
+            <option value="vacio" disabled="disabled" selected="selected">Seleccionar...</option>
+            {% for categoria in categorias %}
+                <option value="{{ categoria[1] }}">{{ categoria[1] }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <div class="form-group col-md-6">
+        <label for="nombre" class="h4">Precio</label>
+        <input type="text" id="nombre" name="precio" class="form-control" />
+    </div>
+    
+    <div class="footer-page">
+        <input type="submit" class="btn btn-outline-success" value="Guardar">
+        <a class="h5" href="{{ url_for('producto')}}">Volver</a>
+    </div>
+
+</form>
+</center>
+
+{% endblock %}

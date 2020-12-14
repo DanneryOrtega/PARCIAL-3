@@ -1,0 +1,31 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}
+    Principal
+{% endblock %}
+
+{% block content %}
+
+<table class="table">
+  
+    <thead>
+      <center><h3>***Mi Perfil***</h3></center>
+      <tr>
+        <th>Nombre</th>
+        <th>Correo</th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <tr>
+        
+        <td>
+
+            <a class="btn btn-outline-danger" href="{{ url_for('editar_perfil')}}">Editar</a>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+{% endblock %}

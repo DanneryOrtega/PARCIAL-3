@@ -1,0 +1,31 @@
+{% extends 'layouts/base.html' %} {% block title %} Categorias {% endblock %} {%
+    block content %}
+    <div class="title-page">
+      <h1>Listado de Categorias</h1>
+      <a class="btn btn-success" href="{{ url_for('crear_categoria') }}">Crear</a>
+    </div>
+    
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombres</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for categoria in categorias %}
+        <tr>
+          <td>{{ categoria[0] }}</td>
+          <td>{{ categoria[1] }}</td>
+
+          <td>
+              <a class="btn" href="{{ url_for('editar_cat', id = categoria[0]) }}">Editar</a>
+              <a class="btn btn-danger" href="{{ url_for('eliminar_cat', id = categoria[0]) }}">Eliminar</a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% endblock %}
+    

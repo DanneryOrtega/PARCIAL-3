@@ -1,0 +1,33 @@
+{% extends 'layouts/base.html' %} {% block title %} Productos {% endblock %} {%
+    block content %}
+    <div class="title-page">
+      <h1>Listado de Productos</h1>
+      <a class="btn btn-success" href="{{ url_for('crear_pro')}}">Crear</a>
+    </div>
+    
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombres</th>
+          <th>Categoria</th>
+          <th>Precio</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for producto in productos %}
+        <tr>
+          <td>{{ producto[0] }}</td>
+          <td>{{ producto[1] }}</td>
+          <td>{{ producto[3] }}</td>
+          <td>{{ producto[4] }}</td>
+
+          <td>
+              <a class="btn" href="{{ url_for('editar_pro', id = producto[0]) }}">Editar</a>
+              <a class="btn btn-danger" href="{{ url_for('eliminar_pro', id = producto[0]) }}">Eliminar</a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% endblock %}

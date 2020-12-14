@@ -1,0 +1,27 @@
+{% extends 'layouts/mensajes.html' %} {% block title %} Login {% endblock %}
+{% block content %}
+
+<center>
+<div class="login-box">
+    <img src="../static/user.png" alt="user">
+    <h2>INICIAR SESIÓN</h2>
+
+    <form action="{{ url_for('login') }}" method="POST" ></form>
+        <div class="form-group col-md-6" >
+            <label for="email" class="h4">Email</label>
+            <input type="email" id="email" name="email" class="form-control" />
+        </div>
+
+        <div class="form-group col-md-6">
+            <label for="password" class="h4">Contraseña</label>
+            <input type="password" placeholder="Minimo 8 y maximo 15 caracteres" id="password" name="password" class="form-control" />
+        </div>
+
+        <button type="submit" class="btn btn-outline-info">Iniciar sesión</button>
+        <h1></h1>
+        <h5>Soy nuevo, quiero <a class="h5"<a href="{{ url_for('registro')}}">Registrarme</a></h5>
+    </form>
+</div>
+</center>
+
+{% endblock %}
