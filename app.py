@@ -197,6 +197,7 @@ def actualizar_per():
         cursor.execute("""update usuarios set nombres = ?, apellidos = ?, email = ? where id = ? 
         """, (nombres, apellidos, email, session['usuario'][0],))
 
+
         db.commit()
 
         flash('Su perfil se edito correctamente', 'success')
