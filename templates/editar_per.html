@@ -1,43 +1,32 @@
 {% extends 'layouts/base.html' %} {% block title %} Editar perfil {% endblock %}
 {% block content %}
 
-<center>
+
     <form action="{{ url_for('actualizar_per') }}" method="POST" >
-     
-        <h6 class="text-white">Hola</h6>
-    <div class="bg-info text-white">
-        <h6>*********************************</h6>
+        <center>
+        <div class="login-box">
         <h2>EDITAR MI PERFIL</h2>
-        <h6>*********************************</h6>
-    </div>
 
-    <!-- <div class="form-group col-md-6">
-        <label for="Id" class="h4">Id</label>
-        <input type="text" id="Id" name="Id" class="form-control"/>
-    </div> -->
+            <div class="form-group col-md-6">
+                <label for="nombres" class="h4">Nombres</label>
+                <input type="text" id="nombres" name="nombres" class="form-control" value="{{session['usuario'][1]}}"/>
+            </div>
 
-    <div class="form-group col-md-6">
-        <label for="nombres" class="h4">Nombres</label>
-        <input type="text" id="nombres" name="nombres" class="form-control" value="{{session['usuario'][1]}}"/>
-    </div>
-    
-    <div class="form-group col-md-6">
-    <label for="apellidos" class="h4">Apellidos</label>
-    <input type="text" id="apellidos" 
-        name="apellidos" class="form-control" value="{{session['usuario'][2]}}"/>
-    </div>
+            <div class="form-group col-md-6">
+            <label for="email" class="h4">Email</label>
+            <input type="email" id="email" name="email" class="form-control" value="{{session['usuario'][3]}}"/>
+            </div>
 
-    <div class="form-group col-md-6">
-    <label for="email" class="h4">Email</label>
-    <input type="email" id="email" name="email" 
-        class="form-control" value="{{session['usuario'][3]}}"/>
-    </div>
-
-    <div class="footer-page">
-    <a class="h5 btn btn-outline-info" href="{{ url_for('perfil') }}" class="btn">Volver</a>
-    <button type="submit" class=" h5 btn btn-success">Guardar</button>
-    </div>
-
-</center>
+            <div class="footer-page">
+            <a class="h5 btn btn-outline-info" href="{{ url_for('perfil') }}" class="btn">
+                <input type="submit" value="Volver" ></a>
+                <br>
+            <div class="login-box2">
+                <input type="submit" class="btn btn-success" value="Guardar" >
+            </div>
+            </div>
+        </div>
+    </center>
+    </form>
 
 {% endblock %}

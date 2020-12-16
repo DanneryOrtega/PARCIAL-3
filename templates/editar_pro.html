@@ -8,13 +8,8 @@
 
 <center>
 <form action="{{ url_for('actualizar_pro') }}" method="POST">
-
-    <div class="bg-info text-white">
-        <h6>*********************************</h6>
+    <div class="login-box">
         <h2>EDITAR PRODUCTOS</h2>
-        <h6>*********************************</h6>
-    </div>
-    <h4 class="text-white">Hola</h4>
 
     <div class="form-group col-md-6">
         <label for="nombre" class="h4">Nombre</label>
@@ -40,7 +35,7 @@
         <input type="submit" class="btn btn-outline-success" value="Guardar">
         <a class="h5" href="{{ url_for('producto')}}">Volver</a>
     </div>
-
+    </div>
 </form>
 </center>
 

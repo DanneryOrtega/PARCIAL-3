@@ -291,7 +291,11 @@ def actualizar_cat():
 
         if(nombres == ""):
             mensaje += 'El campo nombre es requerido '
+           
+        if(len(mensaje) > 0):
+            flash(mensaje,'error')
             return redirect(url_for('editar_cat'))
+
         cursor = db.cursor()
         cursor.execute("""update categoria set nombre = ? where id = ? 
         """, (nombres, categoriaC.getId(),))

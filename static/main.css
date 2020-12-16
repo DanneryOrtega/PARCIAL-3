@@ -26,6 +26,32 @@ box-sizing: border-box;
 padding: 70px 30px;
 }
 
+.login-boxx {
+  width: 320px;
+  height: 390px;
+  background: rgba(0, 0, 0, .5);
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding: 70px 30px;
+  }
+
+  .login-boxxx {
+    width: 320px;
+    height: 390px;
+    background: rgba(0, 0, 0, .5);
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    }
+
 .login-box .avatar {
     width: 100px;
     height: 100px;
@@ -41,8 +67,29 @@ padding: 70px 30px;
     text-align: center;
     font-size: 22px;
   }
+
+  .login-boxx h2 {
+    margin: -50px;
+    padding: 0 0 70px;
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .login-boxxx h2 {
+    margin: -50px;
+    padding: 0 0 70px;
+    text-align: center;
+    font-size: 50px;
+  }
   
   .login-box label {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+  }
+
+  .login-boxx label {
     margin: 0;
     padding: 0;
     font-weight: bold;
@@ -55,13 +102,22 @@ padding: 70px 30px;
 
   }
 
+  .login-boxx input {
+    width: 100%;
+    margin-bottom: 20px;
+
+  }
+
   .login-box input::placeholder {
     color:  rgba(255, 255, 255, 0.884);
   }
   
+  .login-boxx input::placeholder {
+    color:  rgba(255, 255, 255, 0.884);
+  }
 
 
-  .login-box input[type="email"], .login-box input[type="password"] {
+  .login-box input[type="email"], .login-box input[type="password"], .login-box input[type="text"] {
     border: none;
     border-bottom: 1px solid #fff;
     background: transparent;
@@ -70,6 +126,18 @@ padding: 70px 30px;
     color: #fff;
     font-size: 16px;
   }
+  
+  .login-boxx input[type="email"], .login-boxx input[type="password"], .login-boxx input[type="text"] {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+  }
+
+
   
   .login-box input[type="submit"] {
     border: none;
@@ -81,8 +149,38 @@ padding: 70px 30px;
     border-radius: 20px;
     margin: 0%;
   }
+
+  .login-box2 input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #0fb826;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+    margin: 0%;
+    margin-top: 2%;
+  }
   
+  .login-boxx input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #b80f22;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+    margin: 0%;
+  }
+
   .login-box input[type="submit"]:hover {
+    cursor: pointer;
+    background: #ffc107;
+    color: #000;
+  }
+
+  
+  .login-boxx input[type="submit"]:hover {
     cursor: pointer;
     background: #ffc107;
     color: #000;
@@ -94,10 +192,22 @@ padding: 70px 30px;
     line-height: 20px;
     color: darkgrey;
   }
+
+  .login-boxx a {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgrey;
+  }
   
   .login-box a:hover {
     color: #fff;
   }
+
+  .login-boxx a:hover {
+    color: #fff;
+  }
+
 
   .mensaje-flash{
     background-color: rgba(255, 0, 0, 0.747);
@@ -105,6 +215,7 @@ padding: 70px 30px;
     margin: 0 auto;
     border-radius: 5px;
   }
+  
   .close{
       background: rgba(255, 0, 0, 0.397);
       border: none;
@@ -183,5 +294,18 @@ padding: 70px 30px;
     background: #ffc107;
     color: #000;
   }
+
+  .form-register {
+    width: 400px;
+    background: #24303c;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+  }
+  
 
 

@@ -8,24 +8,21 @@
 
 <center>
 <form action="{{ url_for('guardar_categoria') }}" method="POST">
+    <center>
+        <div class="login-box">
+            <h2>REGISTRAR CATEGORIAS</h2>
 
-    <div class="bg-info text-white">
-        <h6>*********************************</h6>
-        <h2>REGISTRAR CATEGORIAS</h2>
-        <h6>*********************************</h6>
-    </div>
-    <h4 class="text-white">Hola</h4>
-
-    <div class="form-group col-md-6">
-        <label for="nombre" class="h4">Nombre</label>
-        <input type="text" id="nombre" name="nombre" class="form-control" />
-    </div>
-    
-    <div class="footer-page">
-        <input type="submit" class="btn btn-outline-success" value="Guardar">
-        <a class="h5" href="{{ url_for('categoria')}}">Volver</a>
-    </div>
-
+            <div class="form-group col-md-6">
+                <label for="nombre" class="h4">Nombre</label>
+                <input type="text" id="nombre" name="nombre" class="form-control" />
+            </div>
+            
+            <div class="footer-page">
+                <input type="submit" class="btn btn-outline-success" value="Guardar">
+                <a class="h5" href="{{ url_for('categoria')}}">Volver</a>
+            </div>
+        </div>
+    </center>
 </form>
 </center>
 

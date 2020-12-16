@@ -1,4 +1,4 @@
-{% extends 'layouts/base.html' %}
+{% extends 'layouts/mensajes.html' %}
 
 {% block title %}
     Registrate
@@ -6,38 +6,33 @@
 
 {% block content %}
 
-<center>
 <form action="{{ url_for('guardar_registro') }}" method="POST">
 
-    <div class="bg-info text-white">
-        <h6>*********************************</h6>
-        <h2>¡REGÍSTRATE!</h2>
-        <h6>*********************************</h6>
-    </div>
-    <h4 class="text-white">Hola</h4>
+    <center>
+        <div class="login-boxx">
+            
+        <!-- <img class="avatar" src="../static/add.png" alt="user"> -->
+            <h2>¡REGÍSTRATE!</h2>
 
-    <div class="form-group col-md-6">
-        <label for="nombre" class="h4">Nombres</label>
-        <input type="text" id="nombre" name="nombre" class="form-control" />
-    </div>
+            <div class="form-group col-md-6">
+                <label for="nombre" class="h4">Nombres</label>
+                <input type="text" id="nombre" name="nombre" class="form-control" />
+            </div>
 
-    <div class="form-group col-md-6">
-        <label for="email" class="h4">Email</label>
-        <input type="email" id="email" name="email" class="form-control" />
-    </div>
+            <div class="form-group col-md-6">
+                <label for="email" class="h4">Email</label>
+                <input type="email" id="email" name="email" class="form-control" />
+            </div>
 
-    <div class="form-group col-md-6">
-        <label for="contrasena" class="h4">Contraseña</label>
-        <input type="password" placeholder="Minimo 8 y maximo 15 caracteres" id="contraseña" name="contrasena" class="form-control" />
-    </div>
-    
-    <div class="footer-page">
-        <input type="submit" class="btn btn-outline-success" value="Registrarme">
-     <h1></h1>
-     <h5>¿Ya tienes una cuenta? <a class="h5" href="{{ url_for('login')}}">Inicia sesión</a></h5>
-    </div>
-
+            <div class="form-group col-md-6">
+                <label for="contrasena" class="h4">Contraseña</label>
+                <input type="password" placeholder="Minimo 8 y maximo 15 caracteres" id="contraseña" name="contrasena" class="form-control" />
+            </div>
+        
+        <!-- <div class="footer-page"> -->
+            <input type="submit" value="Registrarme">
+            <p>¿Ya tienes una cuenta? <a href="{{ url_for('login')}}">Inicia sesión</a></p>
+        </div>
+    </center>
 </form>
-</center>
-
 {% endblock %}
